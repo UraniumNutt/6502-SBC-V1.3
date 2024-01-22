@@ -49,7 +49,12 @@
         }
       },
       "diff_pair_dimensions": [],
-      "drc_exclusions": [],
+      "drc_exclusions": [
+        "hole_clearance|165792846|35033591|0c5bc3f3-7b49-4510-83b4-c1b829af0322|5afc429a-b639-4337-89f1-64fa6332ff7b",
+        "hole_clearance|165792846|35033591|cfb6589e-a77e-433b-89c5-a32f7e53249d|5afc429a-b639-4337-89f1-64fa6332ff7b",
+        "hole_clearance|165792846|41133591|06556863-8819-4fed-a7ed-3e70d2311208|24259ab8-7a76-4ec7-bb7d-b91091f5af4f",
+        "hole_clearance|165792846|41133591|5d6a2692-4019-45bd-b470-d26bbbecaec5|24259ab8-7a76-4ec7-bb7d-b91091f5af4f"
+      ],
       "meta": {
         "version": 2
       },
@@ -426,7 +431,7 @@
     "last_paths": {
       "gencad": "",
       "idf": "",
-      "netlist": "6502 V1.3.net",
+      "netlist": "../../../",
       "specctra_dsn": "",
       "step": "",
       "vrml": ""
