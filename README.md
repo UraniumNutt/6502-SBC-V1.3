@@ -4,5 +4,5 @@ I made similar version before this, but I thought I could do better before shari
 My goal was to make a compact, simple computer with a serial port, and a uart usb bridge built in.
 I also exposed the system bus, so it should be possible to create expansion cards which are mapped into memory. 
 
-![](Board Preview.png)
+![](https://github.com/UraniumNutt/6502-SBC-V1.3/blob/main/Board%20Preview.png)
 
