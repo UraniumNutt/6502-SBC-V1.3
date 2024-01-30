@@ -5865,7 +5865,7 @@
     (property "Value" "ATF22V10B-15GM/883" (at 46.99 107.95 0)
       (effects (font (size 1.524 1.524)))
     )
-    (property "Footprint" "Package_DIP:DIP-24_W10.16mm" (at 26.67 115.57 0)
+    (property "Footprint" "Package_DIP:DIP-24_W7.62mm_Socket" (at 26.67 115.57 0)
       (effects (font (size 1.27 1.27) italic) hide)
     )
     (property "Datasheet" "ATF22V10B-15GM/883" (at 26.67 115.57 0)
