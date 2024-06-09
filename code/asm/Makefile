@@ -19,4 +19,3 @@ ${PROJ}.o: ${PROJ}.s
 clean:
 	$(RM) ${PROJ}.bin ${PROJ}.o
 
-.PHONY: prog clean

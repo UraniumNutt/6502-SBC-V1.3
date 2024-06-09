@@ -26,22 +26,37 @@ reset:
     jsr ACIAInit                         ; init the UART
     lda #%11110111                       ; set the VIA pins to output, except for bit3, which is for miso
     sta DDRA     
-    
+
     jsr ACIAByteIn
-    lda #$d3
+    lda #$e7
     sta math1
-    lda #$1e
+    lda #$33
     sta math1+1
-    ldptr math1, ptr
+    lda #$33
+    sta math2
+    lda #$5a
+    sta math2+1
+        
+    
 main:
+    jsr add
+    ;lda math3
+    ;sta math1
+    ;lda math3+1
+    ;sta math1+1
     jsr convert_bcd
+    ldptr stringbuffer, ptr
     jsr bcd_to_string
     ldptr stringbuffer, ptr
     jsr print_string
+    ldptr message, ptr
+    jsr print_string
+    ;bra main
 done:
     bra done
 message:
-    .asciiz "Hello, World! This is so based"
+    .asciiz "\n\r"
+
 
     nmi:
 exitnmi:
@@ -57,3 +72,4 @@ exitirq:
     .word nmi
     .word reset
     .word irq
+

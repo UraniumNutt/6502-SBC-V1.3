@@ -1,0 +1,12 @@
+GAL22V10
+Test
+
+CLK A15 A14 A13 A12 A11 A10 A9 NC NC NC GND
+NC NC NC NC NC UART VIA RAMCE ROMOE NC NC VCC
+
+/ROMOE = A15; Rom OE goes low (active) when in the highest 32k, the CLK is on, and the INH is not set
+/RAMCE = /A15 * /A14 + /A15 * /A13 + /A15 * /A12 + /A15 * /A11 + /A15 * /A10; the ram ce goes high (inactive) when the same conditions which bring the IOE low (inactive) so the ram is active in the lower half of memory except in its last 1 Kilobye so long as the CLK is high, and the INH is low 
+/VIA = /A15 * A14 * A13 * A12 * A11 * A10 * A9; the I/O enable goes low (active) when in the lower 32k, bits A14 - A10 are high, the CLK is set, and theINH is low, ie the last Kilobyte of the lower half of memory
+/UART = /A15 * A14 * A13 * A12 * A11 * A10 * /A9;
+DESCRIPTION
+This is a test for seeing the limitations of pld's

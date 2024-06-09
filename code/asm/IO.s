@@ -67,18 +67,23 @@ bcd_to_string:
     ldx #3
 @loop:
     dex
+    cpx #2 ; since there can only be 5 digits, dont generate the character for the 6th one
+    beq :+
     lda bcd,x
-    and #%1111000
+    and #%11110000
     lsr
     lsr
     lsr
     lsr
-    jsr hex_digit_converter
+    clc
+    adc #'0'
     sta (ptr),y
     iny
+:
     lda bcd,x
     and #%00001111
-    jsr hex_digit_converter
+    clc
+    adc #'0'
     sta (ptr),y
     iny
     cpx #0
